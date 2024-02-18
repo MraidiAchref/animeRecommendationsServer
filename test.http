@@ -62,3 +62,29 @@ GET http://127.0.0.1:3000/anime/readByrank-anime/ranked/54 HTTP/1.1
 Content-Type: application/json 
 
 
+
+
+//profiles API.
+
+
+###
+POST  http://127.0.0.1:3000/profiles/create-profiles HTTP/1.1
+Content-Type: application/json 
+
+{
+    "profile": "JohnDoe",
+    "gender": "Male",
+    "birthday": "1990-01-01",
+    "favorites_anime": [123, 456, 789],
+    "link": "http://example.com/myprofile"
+}
+
+
+###
+POST  http://127.0.0.1:3000/profiles/delete-profiles HTTP/1.1
+Content-Type: application/json 
+
+{
+    "profile": "JohnDoe"
+}
+
