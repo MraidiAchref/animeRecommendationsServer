@@ -13,4 +13,6 @@ app.use('/anime', require('./src/anime/anime.routes'));
 
 app.use('/profiles', require('./src/profiles/profiles.routes'));
 
+app.use('/review', require('./src/review/review.routes'));
+
 module.exports= app;

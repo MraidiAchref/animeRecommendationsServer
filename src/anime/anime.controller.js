@@ -7,13 +7,13 @@ exports.create = async (req, res) => {
 };
 
 exports.delete = async (req, res) => {
-  await AnimeModel.deleteOne({ uid: req.body.uid });
+  await AnimeModel.deleteOne({ anime_uid: req.body.anime_uid });
   return res.sendStatus(204);
 };
 
 exports.update = async (req, res) => {
   const updateResult = await AnimeModel.updateOne(
-    { uid: req.body.uid },
+    { anime_uid: req.body.anime_uid },
     req.body
   );
   if (updateResult.modifiedCount === 0) {
@@ -23,7 +23,7 @@ exports.update = async (req, res) => {
 };
 
 exports.read = async (req, res) => {
-  const anime = await AnimeModel.findOne({ uid: req.params.uid });
+  const anime = await AnimeModel.findOne({ anime_uid: req.params.anime_uid }).populate('reviews');
   console.log(anime);
   if (!anime) {
     return res.sendStatus(404); 
@@ -32,7 +32,7 @@ exports.read = async (req, res) => {
 };
 
 exports.readAllByUid = async (req, res) => {
-  const animeList = await AnimeModel.find({ uid: req.params.uid });
+  const animeList = await AnimeModel.find({ anime_uid: req.params.anime_uid });
 
  
   if (animeList.length === 0) {

@@ -3,7 +3,7 @@ POST  http://127.0.0.1:3000/anime/create-anime HTTP/1.1
 Content-Type: application/json 
 
 {
-    "uid": 281049679,
+    "anime_uid": 281049679,
     "title": "Test Anime",
     "synopsis": "This is a placeholder synopsis for the test anime. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "genre": "Action, Adventure, Fantasy",

@@ -9,7 +9,7 @@ router.post('/delete-anime',animeController.delete  );
 
 router.post('/update-anime',animeController.update  );
 
-router.get('/read-anime/:uid',animeController.read  );
+router.get('/read-anime/:anime_uid',animeController.read  );
 
 
 router.get('/readAll-anime/:uid',animeController.readAllByUid  );

@@ -3,8 +3,9 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const animeSchema = new Schema(
   {
-    uid: {
+    anime_uid: {
       type: Number,
+      unique : true ,
     },
     title: {
       type: String,
@@ -41,6 +42,12 @@ const animeSchema = new Schema(
     link: {
       type: String,
     },
+    reviews: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Review',
+      },
+    ],
   },
   {
     timestamps: true,
