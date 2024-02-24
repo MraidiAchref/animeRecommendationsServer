@@ -5,13 +5,13 @@
 
 
 ###
-POST  http://127.0.0.1:3000/review/create-reviews HTTP/1.1
+POST  http://127.0.0.1:3000/review/create HTTP/1.1
 Content-Type: application/json 
 
 {
-"uid": 281049679,
+"uid": 124,
 "profile": "User Profile URL or String",
-"anime_uid": 67890,
+"anime_uid": 281049679,
 "text": "This is a sample review text.",
 "score": 8,
 "scores": 9,
@@ -20,11 +20,31 @@ Content-Type: application/json
 
 
 ###
-POST  http://127.0.0.1:3000/review/delete-reviews HTTP/1.1
+POST  http://127.0.0.1:3000/review/delete HTTP/1.1
 Content-Type: application/json 
 
 {
-    "uid": 281049679
+    "uid": 123,
+    "anime_uid": 281049679
 }
 
+
+###
+POST  http://127.0.0.1:3000/review/update HTTP/1.1
+Content-Type: application/json 
+
+{
+"uid": 123,
+"profile": "User Profile URL or String",
+"anime_uid": 281049679,
+"text": "update TEST",
+"score": 10,
+"scores": 9,
+"link": "https://example.com/link-to-something"
+}
+
+
+###
+GET  http://127.0.0.1:3000/review/read/uid/123 HTTP/1.1
+Content-Type: application/json 
 
