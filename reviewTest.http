@@ -1,7 +1,7 @@
 
 
 
-//profiles API.
+//review API.
 
 
 ###
@@ -20,33 +20,11 @@ Content-Type: application/json
 
 
 ###
-POST  http://127.0.0.1:3000/profiles/delete-profiles HTTP/1.1
+POST  http://127.0.0.1:3000/review/delete-reviews HTTP/1.1
 Content-Type: application/json 
 
 {
-    "profile": "JohnDoe"
+    "uid": 281049679
 }
 
 
-###
-POST  http://127.0.0.1:3000/profiles/update-profiles HTTP/1.1
-Content-Type: application/json 
-
-{
-    "profile": "JohnDoe",
-    "gender": "Male",
-    "birthday": "2001-01-01",
-    "favorites_anime": [123, 456, 789],
-    "link": "http://lamjed.com/myprofile"
-}
-
-
-
-###
-GET http://127.0.0.1:3000/profiles/read-profiles/profile/JohnDoe  HTTP/1.1
-Content-Type: application/json 
-
-
-###
-GET http://127.0.0.1:3000/profiles/readByGender-profiles/gender/Male  HTTP/1.1
-Content-Type: application/json 
