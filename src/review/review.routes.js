@@ -1,16 +1,17 @@
 const express = require('express');
 const reviewsController = require('./review.controller');
+const {errorWrapper} = require('../lib/errorHandler') ;
 
 const router = express.Router();
 
-router.post('/create',reviewsController.create  );
+router.post('/create',errorWrapper(reviewsController.create)  );
 
-router.post('/delete',reviewsController.delete  );
+router.post('/delete',errorWrapper(reviewsController.delete)  );
 
 
-router.post('/update',reviewsController.update  );
+router.post('/update',errorWrapper(reviewsController.update)  );
 
-router.get('/read/uid/:uid',reviewsController.read );
+router.get('/read/uid/:uid',errorWrapper(reviewsController.read) );
 
 
 

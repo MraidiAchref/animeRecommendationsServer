@@ -1,21 +1,19 @@
-const express = require('express');
-const animeController = require('./anime.controller');
+const express = require("express");
+const animeController = require("./anime.controller");
+const {errorWrapper} = require("../lib/errorHandler");
 
 const router = express.Router();
 
-router.post('/create-anime',animeController.create  );
+router.post("/create-anime", errorWrapper(animeController.create));
 
-router.post('/delete-anime',animeController.delete  );
+router.post("/delete-anime", errorWrapper(animeController.delete));
 
-router.post('/update-anime',animeController.update  );
+router.post("/update-anime", errorWrapper(animeController.update));
 
-router.get('/read-anime/:anime_uid',animeController.read  );
+router.get("/read-anime/:anime_uid", errorWrapper(animeController.read));
 
+router.get("/readAll-anime/:uid", errorWrapper(animeController.readAllByUid));
 
-router.get('/readAll-anime/:uid',animeController.readAllByUid  );
+router.get("/readByrank-anime/ranked/:ranked", errorWrapper(animeController.readByRank));
 
-router.get('/readByrank-anime/ranked/:ranked',animeController.readByRank  );
-
-
-
-module.exports = router ;
+module.exports = router;
