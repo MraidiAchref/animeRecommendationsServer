@@ -2,14 +2,11 @@ const { request } = require("../../app");
 const AnimeModel = require("./anime.model");
 
 exports.create = async (req, res) => {
-  //throw new Error('NOT_FOUND')
   await AnimeModel.create(req.body);
-  throw new Error('NOT_FOUND')
 };
 
 exports.delete = async (req, res) => {
   await AnimeModel.deleteOne({ anime_uid: req.body.anime_uid });
-  throw new Error('NOT_FOUND');
 };
 
 exports.update = async (req, res) => {
