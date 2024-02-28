@@ -9,7 +9,7 @@ const {
 } = require("../utils/successHundler");
 
 exports.create = async (req, res) => {
-  const anime = await AnimeModel.findOne({ anime_uid: req.body.anime_uid });
+  const anime = await AnimeModel.findOne({ uid: req.body.anime_uid });
   if (!anime) throw new Error("NOT_FOUND");
 
   const review = await ReviewModel.create(req.body);
@@ -22,7 +22,7 @@ exports.delete = async (req, res) => {
   const review = await ReviewModel.findOne({ uid: req.body.uid });
   if (!review) throw new Error("NOT_FOUND");
 
-  const anime = await AnimeModel.findOne({ anime_uid: req.body.anime_uid });
+  const anime = await AnimeModel.findOne({ uid: req.body.anime_uid });
   if (!anime) throw new Error("NOT_FOUND");
 
   await ReviewModel.deleteOne({ uid: req.body.uid });

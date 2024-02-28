@@ -10,10 +10,11 @@ router.post("/delete-anime", errorWrapper(animeController.delete));
 
 router.post("/update-anime", errorWrapper(animeController.update));
 
-router.get("/read-anime/:anime_uid", errorWrapper(animeController.read));
+router.get("/read-anime/:uid", errorWrapper(animeController.read));
 
 router.get("/readAll-anime/:uid", errorWrapper(animeController.readAllByUid));
 
-router.get("/readByrank-anime/ranked/:ranked", errorWrapper(animeController.readByRank));
+
+
 
 module.exports = router;

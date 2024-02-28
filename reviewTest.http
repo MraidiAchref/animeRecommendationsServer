@@ -24,7 +24,7 @@ POST  http://127.0.0.1:3000/review/delete HTTP/1.1
 Content-Type: application/json 
 
 {
-    "uid": 123,
+    "uid": 125,
     "anime_uid": 281049679
 }
 
@@ -34,8 +34,8 @@ POST  http://127.0.0.1:3000/review/update HTTP/1.1
 Content-Type: application/json 
 
 {
-"uid": 123,
-"profile": "User Profile URL or String",
+"uid": 125,
+"profile": "TEST String",
 "anime_uid": 281049679,
 "text": "update TEST",
 "score": 10,
@@ -45,6 +45,6 @@ Content-Type: application/json
 
 
 ###
-GET  http://127.0.0.1:3000/review/read/uid/124 HTTP/1.1
+GET  http://127.0.0.1:3000/review/read/uid/125 HTTP/1.1
 Content-Type: application/json 
 

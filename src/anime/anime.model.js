@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const animeSchema = new Schema(
   {
-    anime_uid: {
+    uid: {
       type: Number,
       unique : true ,
     },
