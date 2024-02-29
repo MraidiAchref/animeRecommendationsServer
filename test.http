@@ -48,6 +48,14 @@ Content-Type: application/json
 
 
 ###
+POST http://l127.0.0.1:3000/upload-csv HTTP/1.1
+Content-Type: application/json 
+
+{
+    "File": "C:\Users\21629\Desktop\animeRecommendationsServer\data\animes.csv"
+}
+
+###
 GET http://127.0.0.1:3000/anime/read-anime/281049679 HTTP/1.1
 Content-Type: application/json 
 

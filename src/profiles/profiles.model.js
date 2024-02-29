@@ -14,7 +14,7 @@ const profilesSchema = new Schema(
     },
     favorites_anime: [
       {
-        type: Number,
+        type: String,
       },
     ],
     link: {
